@@ -27,6 +27,7 @@ button {
   padding: 15px;
   background-color: #e0e0e0;
   border: 0.5px solid #d6d6d6;
+  font-size: 15px;
 }
 
 .btn-input {
@@ -43,4 +44,3 @@ button {
 .color {
   background-color: #f5913e;
 }
-
