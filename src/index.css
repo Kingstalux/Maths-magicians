@@ -1,0 +1,46 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 50vw;
+  height: 50vh;
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+button {
+  padding: 15px;
+  background-color: #e0e0e0;
+  border: 0.5px solid #d6d6d6;
+}
+
+.btn-input {
+  grid-column: 1/5;
+  text-align: end;
+  background-color: #858693;
+  color: white;
+}
+
+.btn-0 {
+  grid-column: 1/3;
+}
+
+.color {
+  background-color: #f5913e;
+}
+
