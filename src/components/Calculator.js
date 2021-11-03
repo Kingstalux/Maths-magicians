@@ -26,22 +26,7 @@ export default class Calculator extends Component {
       next: result.next,
       operation: result.operation,
     });
-    // if (e.target.value !== '=') {
-    //   const { display } = this.state;
-    //   if (e.target.value !== 'AC') {
-    // this.setState({
-    //   display: display === '0' ? `${e.target.value}` : `${display} ${e.target.value}`,
-    // });
-    //   } else {
-    // this.setState({
-    //   display: '0',
-    // });
-    //   }
-    // } else if (e.target.value === '=') {
-    //   this.setState({
-    //     display: result.total,
-    //   });
-    // }
+
     if (e.target.value === '=') {
       this.setState({
         display: result.total,
@@ -49,11 +34,6 @@ export default class Calculator extends Component {
     } else if (e.target.value === 'AC') {
       this.setState({
         display: '0',
-      });
-    } else if (e.target.value === '+/-') {
-      const { display } = this.state;
-      this.setState({
-        display: -display,
       });
     } else {
       const { display } = this.state;
