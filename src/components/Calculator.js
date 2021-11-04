@@ -2,7 +2,25 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
 export default function Calculator() {
-
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+    display: '0',
+  });
+  const handleClick = (e) => {
+    const {
+      total, next, operation, display,
+    } = state;
+    const result = calculate({ total, next, operation }, e.target.value);
+    setState(() => ({
+      total: result.total,
+      next: result.next,
+      operation: result.operation,
+      display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
+    }));
+    console.log(result.total);
+  };
   return (
     <div className="body">
       <button className="btn-input" type="button" value="0">{state.display}</button>
