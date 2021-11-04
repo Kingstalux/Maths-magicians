@@ -1,73 +1,58 @@
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-      display: '0',
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick = (e) => {
+export default function Calculator() {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+    display: '0',
+  });
+  const handleClick = (e) => {
     const {
-      total, next, operation,
-    } = this.state;
-    const result = calculate({
-      total, next, operation,
-    }, e.target.value);
-    this.setState({
+      total, next, operation, display,
+    } = state;
+    const result = calculate({ total, next, operation }, e.target.value);
+    setState(() => ({
       total: result.total,
       next: result.next,
       operation: result.operation,
-    });
-
-    if (e.target.value === '=') {
-      this.setState({
-        display: result.total,
-      });
-    } else if (e.target.value === 'AC') {
-      this.setState({
+      display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
+    }));
+    if (e.target.value === 'AC') {
+      setState(() => ({
         display: '0',
-      });
-    } else {
-      const { display } = this.state;
-      this.setState({
-        display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
-      });
+      }));
+    } else if (e.target.value === '=') {
+      setState(() => ({
+        display: result.total,
+      }));
     }
-  }
-
-  render() {
-    const { display } = this.state;
-    return (
-      <div className="body">
-        <button className="btn-input" type="button" value="0">{display}</button>
-        <button type="button" onClick={this.handleClick} value="AC">AC</button>
-        <button type="button" onClick={this.handleClick} value="+/-">+/-</button>
-        <button type="button" onClick={this.handleClick} value="%">%</button>
-        <button className="color" type="button" onClick={this.handleClick} value="÷">÷</button>
-        <button type="button" onClick={this.handleClick} value="7">7</button>
-        <button type="button" onClick={this.handleClick} value="8">8</button>
-        <button type="button" onClick={this.handleClick} value="9">9</button>
-        <button className="color" type="button" onClick={this.handleClick} value="x">×</button>
-        <button type="button" onClick={this.handleClick} value="4">4</button>
-        <button type="button" onClick={this.handleClick} value="5">5</button>
-        <button type="button" onClick={this.handleClick} value="6">6</button>
-        <button className="color" type="button" onClick={this.handleClick} value="-">-</button>
-        <button type="button" onClick={this.handleClick} value="1">1</button>
-        <button type="button" onClick={this.handleClick} value="2">2</button>
-        <button type="button" onClick={this.handleClick} value="3">3</button>
-        <button className="color" type="button" onClick={this.handleClick} value="+">+</button>
-        <button className="btn-0" type="button" onClick={this.handleClick} value="0">0</button>
-        <button type="button" onClick={this.handleClick} value=".">.</button>
-        <button className="color" type="button" onClick={this.handleClick} value="=">=</button>
-      </div>
-    );
-  }
+  };
+  return (
+    <div className="body">
+      <button className="btn-input" type="button" value="0">{state.display}</button>
+      <button type="button" onClick={handleClick} value="AC">AC</button>
+      <button type="button" onClick={handleClick} value="+/-">+/-</button>
+      <button type="button" onClick={handleClick} value="%">%</button>
+      <button className="color" type="button" onClick={handleClick} value="÷">÷</button>
+      <button type="button" onClick={handleClick} value="7">7</button>
+      <button type="button" onClick={handleClick} value="8">8</button>
+      <button type="button" onClick={handleClick} value="9">9</button>
+      <button className="color" type="button" onClick={handleClick} value="x">×</button>
+      <button type="button" onClick={handleClick} value="4">4</button>
+      <button type="button" onClick={handleClick} value="5">5</button>
+      {' '}
+      <button type="button" onClick={handleClick} value="6">6</button>
+      <button className="color" type="button" onClick={handleClick} value="-">-</button>
+      <button type="button" onClick={handleClick} value="1">1</button>
+      <button type="button" onClick={handleClick} value="2">2</button>
+      <button type="button" onClick={handleClick} value="3">3</button>
+      <button className="color" type="button" onClick={handleClick} value="+">+</button>
+      <button className="btn-0" type="button" onClick={handleClick} value="0">0</button>
+      {' '}
+      <button type="button" onClick={handleClick} value=".">.</button>
+      <button className="color" type="button" onClick={handleClick} value="=">=</button>
+    </div>
+  );
 }
