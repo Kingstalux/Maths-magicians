@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).I then continued with the development of the Math Magicians app. I developped a React component that will hold the core functionality: a calculator. Next I implement the event handlers a user would need to use the math logic from calculate.js and operate.js in the React calculator component. A user can now perform the various maths operations.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).I then continued with the development of the Math Magicians app. I developped a React component that will hold the core functionality: a calculator. Next I implement the event handlers a user would need to use the math logic from calculate.js and operate.js in the React calculator component. A user can now perform the various maths operations. For the next milestone of this project, I refactored the calculator code from class components to function components. The functionality of the calculator is still the same.
 
 ## Available Scripts
 
