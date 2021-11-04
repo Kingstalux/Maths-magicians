@@ -19,7 +19,6 @@ export default function Calculator() {
       operation: result.operation,
       display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
     }));
-    console.log(result.total);
     if (e.target.value === 'AC') {
       setState(() => ({
         display: '0',
@@ -29,12 +28,6 @@ export default function Calculator() {
         display: result.total,
       }));
     }
-    //  else {
-    //   const { display } = state;
-    //   setState(() => ({
-    //     display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
-    //   }));
-    // }
   };
   return (
     <div className="body">
