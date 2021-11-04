@@ -20,6 +20,21 @@ export default function Calculator() {
       display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
     }));
     console.log(result.total);
+    if (e.target.value === 'AC') {
+      setState(() => ({
+        display: '0',
+      }));
+    } else if (e.target.value === '=') {
+      setState(() => ({
+        display: result.total,
+      }));
+    }
+    //  else {
+    //   const { display } = state;
+    //   setState(() => ({
+    //     display: display === '0' ? `${`${e.target.value}`}` : `${display} ${e.target.value}`,
+    //   }));
+    // }
   };
   return (
     <div className="body">
