@@ -9,19 +9,19 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <nav>
+        <nav className="nav">
           <div>
             <p>Maths Magicians</p>
           </div>
           <div>
             <ul>
-              <li>
+              <li className="home">
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className="calculator">
                 <Link to="/calculator">Calculator</Link>
               </li>
-              <li>
+              <li className="quote">
                 <Link to="/quote">Quote</Link>
               </li>
             </ul>
