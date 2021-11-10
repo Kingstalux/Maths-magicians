@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <div>
         <nav className="nav">
-          <div>
+          <div className="logo">
             <p>Maths Magicians</p>
           </div>
           <div>

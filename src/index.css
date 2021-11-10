@@ -79,7 +79,13 @@ button {
   padding-inline: 1em;
 }
 
-.home, .calculator {
+.logo {
+  font-weight: bolder;
+  font-size: large;
+}
+
+.home,
+.calculator {
   border-right: 2px solid black;
 }
 
@@ -133,6 +139,8 @@ button {
   text-align: center;
 }
 
-.home > a.active, .calculator > a.active, .quote > a.active {
+.home > a.active,
+.calculator > a.active,
+.quote > a.active {
   color: blue;
 }
