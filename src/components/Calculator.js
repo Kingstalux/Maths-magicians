@@ -30,7 +30,7 @@ export default function Calculator() {
     }
   };
   return (
-    <div>
+    <div className="calculator-page">
       <h1>Lets do some maths</h1>
       <div className="body">
         <button className="btn-input" type="button" value="0">{state.display}</button>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import Calculator from './components/Calculator';
 import Home from './pages/Home';
 import Quotes from './pages/Quotes';
@@ -16,13 +16,13 @@ export default class App extends Component {
           <div>
             <ul>
               <li className="home">
-                <Link to="/">Home</Link>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
               </li>
               <li className="calculator">
-                <Link to="/calculator">Calculator</Link>
+                <NavLink to="/calculator" activeClassName="active">Calculator</NavLink>
               </li>
               <li className="quote">
-                <Link to="/quote">Quote</Link>
+                <NavLink to="/quote" activeClassName="active">Quote</NavLink>
               </li>
             </ul>
           </div>

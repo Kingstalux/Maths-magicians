@@ -127,3 +127,12 @@ button {
   bottom: 0;
   right: 0;
 }
+
+.calculator-page h1 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.home > a.active, .calculator > a.active, .quote > a.active {
+  color: blue;
+}
