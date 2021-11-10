@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -23,6 +28,12 @@
   text-align: center;
 }
 
+body {
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
 button {
   padding: 15px;
   background-color: #e0e0e0;
@@ -43,4 +54,93 @@ button {
 
 .color {
   background-color: #f5913e;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100vw;
+  background-color: #f5913e;
+}
+
+.nav div {
+  margin-inline: 2em;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  padding-inline: 1em;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: large;
+}
+
+.home,
+.calculator {
+  border-right: 2px solid black;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav a:hover {
+  color: blue;
+}
+
+.home-page h1 {
+  margin: 2em auto 2em 1em;
+}
+
+.home-page p {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: #f5913e;
+  padding: 10px;
+}
+
+.footer p {
+  padding-inline: 2em;
+}
+
+.quote-page {
+  text-align: center;
+  width: 50vw;
+  max-width: 700px;
+  height: 20vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.calculator-page h1 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.home > a.active,
+.calculator > a.active,
+.quote > a.active {
+  color: blue;
 }
