@@ -33,6 +33,15 @@ export default class App extends Component {
           <Route path="/calculator" element={<div className="app"><Calculator /></div>} />
           <Route path="/quote" element={<Quotes />} />
         </Routes>
+
+        <footer className="footer">
+          <p>
+            Maths Magicians 2021 - Some rights reserved.
+          </p>
+          <p>
+            @ Kingstalux
+          </p>
+        </footer>
       </div>
     );
   }
