@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).I then continued with the development of the Math Magicians app. I developped a React component that will hold the core functionality: a calculator. Next I implement the event handlers a user would need to use the math logic from calculate.js and operate.js in the React calculator component. A user can now perform the various maths operations. For the next milestone of this project, I refactored the calculator code from class components to function components. The functionality of the calculator is still the same. In the next project, I created a full website for the Math magicians app, consisting of several pages and using the components I already created. The different pages available for the users are the homepage, calculator page and the quote page.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I then continued with the development of the Math Magicians app. I developped a React component that will hold the core functionality: a calculator. Next I implement the event handlers a user would need to use the math logic from calculate.js and operate.js in the React calculator component. A user can now perform the various maths operations. For the next milestone of this project, I refactored the calculator code from class components to function components. The functionality of the calculator is still the same. In the next project, I created a full website for the Math magicians app, consisting of several pages and using the components I already created. The different pages available for the users are the homepage, calculator page and the quote page. Finally we wrote tests for the operate.js and calculate.js files using jest and also tests for the components home, quotes and calculator using react testing library.
 
 ## Available Scripts
 
@@ -69,13 +69,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-## Author
+## Authors
 
 👤 **Ngu Kingsely**
 
 - GitHub: [@Kingstalux](https://github.com/Kingstalux)
 - Twitter: [@NguKingsley](https://twitter.com/NguKingsley)
 - LinkedIn: [Ngu Kingsely](https://www.linkedin.com/in/ngu-kingsely-junior-cho-974b60136/)
+
+👤 **Uchechi Ughoaja**
+
+- GitHub: [@Ugboaja Uchechi](https://github.com/Ughoaja-Uchechi)
 
 
 
