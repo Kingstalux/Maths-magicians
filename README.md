@@ -7,8 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Pages
 
-- [Math-Magician-Heroku](https://math-magician-app.herokuapp.com/)
-- [Math-Magician-Netlify](https://vibrant-wing-818e7c.netlify.app/)
+- [Math-Magician](https://vibrant-wing-818e7c.netlify.app/)
 
 
 
